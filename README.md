@@ -21,15 +21,15 @@ If you are interested in contributing to this project, but perhaps don't quite k
 Requirements
 ============
 * Java >= 17 (OpenJDK JVM is tested by our CI on Travis)
-* MariaDB 10.6
+* MariaDB 10.9
 
 You can run the required version of the database server in a container, instead of having to install it, like this:
 
-    docker run --name mariadb-10.8 -p 3306:3306 -e MARIADB_ROOT_PASSWORD=mysql -d mariadb:10.8
+    docker run --name mariadb-10.9 -p 3306:3306 -e MARIADB_ROOT_PASSWORD=mysql -d mariadb:10.9
 
 and stop and destroy it like this:
 
-    docker rm -f mariadb-10.8
+    docker rm -f mariadb-10.9
 
 Beware that this database container database keeps its state inside the container and not on the host filesystem.  It is lost when you destroy (rm) this container.  This is typically fine for development.  See [Caveats: Where to Store Data on the database container documentation](https://hub.docker.com/_/mariadb) re. how to make it persistent instead of ephemeral.
 
